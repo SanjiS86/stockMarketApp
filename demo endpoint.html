@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Target Price</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #333;
+      }
+      .mainClass {
+        background-color: #fff;
+        padding: 20px 40px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+        margin-top: 20px;
+      }
+      input[type="text"] {
+        padding: 10px;
+        width: 80%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-top: 10px;
+      }
+
+      button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+      h1 {
+        color: #007bff;
+        margin-top: 20px;
+        font-size: 24px;
+      }
+      .targetPrice,
+      .socialSentiment,
+      .earnings {
+        background-color: #fff;
+        padding: 20px 40px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+        margin-top: 20px;
+      }
+      label {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .next,
+      .last,
+      .three {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin: 0 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainClass">
+      <label for="tickerInput">Enter Ticker Symbol:</label>
+      <input
+        type="text"
+        id="tickerInput"
+        placeholder="Enter ticker symbol..."
+      />
+      <button onclick="fetchData()">Get data</button>
+    </div>
+    <div class="targetPrice">
+      <h1>Stock Target Price</h1>
+      <div id="targetPrice"></div>
+    </div>
+    <div class="socialSentiment">
+      <h1>Social Sentiment</h1>
+      <div id="socialSentiment"></div>
+      <div id="comments"></div>
+      <div id="likes"></div>
+      <div id="posts"></div>
+      <div id="stocktweetsSentiment"></div>
+      <div id="stComments"></div>
+      <div id="stLikes"></div>
+      <div id="stPosts"></div>
+    </div>
+    <div class="earnings">
+      <h1>Earnings Historical & Upcoming</h1>
+      <div class="next">
+        <div id="nextQDate"></div>
+        <div id="epsNextQ"></div>
+        <div id="estimateNextQ"></div>
+      </div>
+
+      <div class="last">
+        <div id="lastQDate"></div>
+        <div id="epsLastQ"></div>
+        <div id="estimateLastQ"></div>
+      </div>
+
+      <div class="three">
+        <div id="threeMagoDate"></div>
+        <div id="epsthreeMAgo"></div>
+        <div id="estimatethreeMAgo"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
