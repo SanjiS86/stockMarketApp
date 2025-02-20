@@ -6,3 +6,5 @@ To get your custom API key go to <a href="https://site.financialmodelingprep.com
 
 With this simple app you will be able to extract stock consensus target price, social sentiment and EPS expacted and actual data. 
 To understand the code and app functionality in more detail read my article on <a href="https://github.com/SanjiS86/stockMarketApp/wiki">simple web app building</a> 
+
+For advanced stock analysis and trade recommendations use the Stocks 2 Buy iOS app for finding  <a href="https://www.stocks2buynow.com">best undervalued stocks to buy now</a>
